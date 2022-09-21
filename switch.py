@@ -1,0 +1,35 @@
+import time
+import serial
+
+ser = serial.Serial('/dev/ttyS0', 9600, serial.EIGHTBITS, serial.PARITY_NONE, timeout=1)
+ser.close()
+
+time.sleep(1)
+ser.open()
+time.sleep(1)
+ser.flushInput()
+ser.flushOutput()
+
+#ser.write("\x02\x18\x18\x02\x18\x18*T\r")
+ser.write([2])
+time.sleep(0.01)
+ser.write([24])
+time.sleep(0.01)
+ser.write([24])
+time.sleep(0.01)
+ser.write([2])
+time.sleep(0.01)
+ser.write([24])
+time.sleep(0.01)
+ser.write([24])
+time.sleep(0.01)
+ser.write([42])
+time.sleep(0.01)
+ser.write([84])
+time.sleep(0.01)
+ser.write([13])
+
+time.sleep(1)
+ser.flushInput()
+ser.flushOutput()
+ser.close()

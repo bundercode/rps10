@@ -1,0 +1,24 @@
+body {
+	background-color: #01DF01;
+}
+form {
+	background-color: #0B3B17;
+	width: 70%;
+	margin: 15%;
+	margin-top: 10%;
+}
+#heading {
+	color: #0B3B17;
+	font-size: 100px;
+}
+button {
+	height: 200px;
+	width: 50%;
+	margin: 25%;
+	font-size: 60px;
+}
+button#light {
+	margin-bottom: 0;
+}
+button#pump {
+}
